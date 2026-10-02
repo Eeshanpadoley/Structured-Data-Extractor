@@ -1,0 +1,227 @@
+[
+  {
+    "label": "Clean receipt",
+    "input": "Paid ₹ 1,250 to AWS India Pvt Ltd on 12 March 2024. Invoice #INV-2024-0312. Services: cloud compute.",
+    "status": 200,
+    "response": {
+      "review_required": false,
+      "fields": {
+        "vendor_name": {
+          "value": "AWS India Pvt Ltd",
+          "confidence": 1,
+          "needs_review": false
+        },
+        "amount": {
+          "value": 1250,
+          "confidence": 1,
+          "needs_review": false
+        },
+        "currency": {
+          "value": "INR",
+          "confidence": 0.9,
+          "needs_review": false
+        },
+        "date": {
+          "value": "2024-03-12",
+          "confidence": 0.9,
+          "needs_review": false
+        },
+        "category": {
+          "value": "software",
+          "confidence": 0.9,
+          "needs_review": false
+        },
+        "description": {
+          "value": "Services: cloud compute",
+          "confidence": 1,
+          "needs_review": false
+        },
+        "invoice_id": {
+          "value": "INV-2024-0312",
+          "confidence": 1,
+          "needs_review": false
+        }
+      }
+    }
+  },
+  {
+    "label": "Vendor email",
+    "input": "Hi team, please find attached the invoice from Zoho Corp for ₹ 4,800 (software subscription, April 2024). Reference: ZHO-88821.",
+    "status": 200,
+    "response": {
+      "review_required": false,
+      "fields": {
+        "vendor_name": {
+          "value": "Zoho Corp",
+          "confidence": 0.99,
+          "needs_review": false
+        },
+        "amount": {
+          "value": 4800,
+          "confidence": 0.99,
+          "needs_review": false
+        },
+        "currency": {
+          "value": "INR",
+          "confidence": 0.9,
+          "needs_review": false
+        },
+        "date": {
+          "value": "2024-04-01",
+          "confidence": 0.85,
+          "needs_review": false
+        },
+        "category": {
+          "value": "software",
+          "confidence": 0.99,
+          "needs_review": false
+        },
+        "description": {
+          "value": "software subscription, April 2024",
+          "confidence": 0.99,
+          "needs_review": false
+        },
+        "invoice_id": {
+          "value": "ZHO-88821",
+          "confidence": 0.99,
+          "needs_review": false
+        }
+      }
+    }
+  },
+  {
+    "label": "Slack message",
+    "input": "hey can someone reimburse me for the uber last tuesday? it was like 340 rupees, went to the airport for the client meeting",
+    "status": 200,
+    "response": {
+      "review_required": true,
+      "fields": {
+        "vendor_name": {
+          "value": "Uber",
+          "confidence": 0.95,
+          "needs_review": false
+        },
+        "amount": {
+          "value": 340,
+          "confidence": 0.9,
+          "needs_review": false
+        },
+        "currency": {
+          "value": "INR",
+          "confidence": 0.85,
+          "needs_review": false
+        },
+        "date": {
+          "value": null,
+          "confidence": 0.4,
+          "needs_review": true
+        },
+        "category": {
+          "value": "travel",
+          "confidence": 0.9,
+          "needs_review": false
+        },
+        "description": {
+          "value": "Uber to the airport for the client meeting",
+          "confidence": 0.95,
+          "needs_review": false
+        },
+        "invoice_id": {
+          "value": null,
+          "confidence": 0.1,
+          "needs_review": true
+        }
+      }
+    }
+  },
+  {
+    "label": "Scanned receipt",
+    "input": "DELHI METRO RAIL CORP Token: 0042 Fare: INR 30 Date: 29-04-2024 From: Rajiv Chowk To: Hauz Khas",
+    "status": 200,
+    "response": {
+      "review_required": false,
+      "fields": {
+        "vendor_name": {
+          "value": "DELHI METRO RAIL CORP",
+          "confidence": 1,
+          "needs_review": false
+        },
+        "amount": {
+          "value": 30,
+          "confidence": 1,
+          "needs_review": false
+        },
+        "currency": {
+          "value": "INR",
+          "confidence": 1,
+          "needs_review": false
+        },
+        "date": {
+          "value": "2024-04-29",
+          "confidence": 0.95,
+          "needs_review": false
+        },
+        "category": {
+          "value": "travel",
+          "confidence": 1,
+          "needs_review": false
+        },
+        "description": {
+          "value": "Metro token from Rajiv Chowk to Hauz Khas",
+          "confidence": 0.95,
+          "needs_review": false
+        },
+        "invoice_id": {
+          "value": "0042",
+          "confidence": 0.9,
+          "needs_review": false
+        }
+      }
+    }
+  },
+  {
+    "label": "Ambiguous/garbage",
+    "input": "meeting notes: discussed q2 targets, revenue up 12%, john to follow up with vendors next week",
+    "status": 200,
+    "response": {
+      "review_required": true,
+      "fields": {
+        "vendor_name": {
+          "value": null,
+          "confidence": 0.1,
+          "needs_review": true
+        },
+        "amount": {
+          "value": null,
+          "confidence": 0.1,
+          "needs_review": true
+        },
+        "currency": {
+          "value": null,
+          "confidence": 0.1,
+          "needs_review": true
+        },
+        "date": {
+          "value": null,
+          "confidence": 0.1,
+          "needs_review": true
+        },
+        "category": {
+          "value": "other",
+          "confidence": 0.2,
+          "needs_review": true
+        },
+        "description": {
+          "value": "Meeting notes discussing q2 targets and revenue",
+          "confidence": 0.9,
+          "needs_review": false
+        },
+        "invoice_id": {
+          "value": null,
+          "confidence": 0.1,
+          "needs_review": true
+        }
+      }
+    }
+  }
+]

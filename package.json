@@ -1,0 +1,17 @@
+{
+  "name": "structured-data-extractor",
+  "version": "1.0.0",
+  "description": "API that extracts structured, database-ready fields with per-field confidence scores from unstructured text using an LLM.",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test:samples": "node test/run-samples.js"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}
